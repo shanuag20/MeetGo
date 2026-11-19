@@ -40,10 +40,8 @@ const start = async () => {
             `MONGO Connected DB HOST: ${connectionDb.connection.host}`
         );
 
-        server.listen(app.get("port"), () => {
-            console.log(
-                `LISTENING ON PORT ${app.get("port")}`
-            );
+        server.listen(app.get("port"), "0.0.0.0", () => {
+            console.log(`LISTENING ON PORT ${app.get("port")}`);
         });
 
     } catch (error) {
