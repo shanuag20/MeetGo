@@ -1,0 +1,679 @@
+
+/* =====================================
+   MEETGO - LANDING PAGE
+===================================== */
+
+.meetgo {
+    min-height: 100vh;
+    background: #080b16;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.meetgo * {
+    box-sizing: border-box;
+}
+
+.meetgo button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* NAVBAR */
+
+.meetgo-navbar {
+    min-height: 82px;
+    padding: 16px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    background: #080b16;
+    position: relative;
+    z-index: 10;
+}
+
+.meetgo-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.meetgo-logo h2 {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin: 0;
+    color: #fff;
+}
+
+.meetgo-logo h2 span {
+    color: #a78bfa;
+}
+
+.logo-symbol {
+    font-size: 30px;
+    color: #a78bfa;
+}
+
+.meetgo-nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.meetgo-nav-links a {
+    color: #aab1c4;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.meetgo-nav-links a:hover {
+    color: #a78bfa;
+}
+
+.meetgo-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.meetgo-nav-actions button {
+    padding: 12px 17px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nav-guest,
+.nav-login {
+    color: #e0e3ed;
+    background: transparent;
+    border: none;
+}
+
+.nav-guest:hover,
+.nav-login:hover {
+    color: #a78bfa;
+}
+
+.nav-signup {
+    color: white;
+    background: #7654e8;
+    border: 1px solid #7654e8;
+    transition: 0.3s;
+}
+
+.nav-signup:hover {
+    background: #8c70f2;
+    transform: translateY(-2px);
+}
+
+/* HERO */
+
+.meetgo-hero {
+    min-height: 650px;
+    padding: 85px 9%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 15px;
+    color: #bba8ff;
+    background: rgba(118,84,232,0.1);
+    border: 1px solid rgba(167,139,250,0.3);
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #5ee6a8;
+    display: inline-block;
+    box-shadow: 0 0 10px #5ee6a8;
+}
+
+.hero-content h1 {
+    font-size: clamp(45px, 5vw, 68px);
+    line-height: 1.13;
+    letter-spacing: -3px;
+    font-weight: 800;
+    margin: 28px 0 22px;
+}
+
+.hero-content h1 span {
+    color: #a78bfa;
+}
+
+.hero-content > p {
+    color: #aab1c4;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 490px;
+    margin-bottom: 30px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.hero-actions button {
+    padding: 16px 23px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.hero-primary {
+    background: #7654e8;
+    border: 1px solid #7654e8;
+    color: white;
+}
+
+.hero-primary:hover {
+    background: #9276f5;
+    transform: translateY(-3px);
+}
+
+.hero-primary span {
+    margin-left: 12px;
+}
+
+.hero-secondary {
+    color: white;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.hero-secondary:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+.hero-note {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #929bb0;
+    font-size: 12px;
+}
+
+.hero-note span {
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #5ee6a8;
+    background: rgba(94,230,168,0.12);
+}
+
+/* HERO IMAGE */
+
+.hero-visual {
+    position: relative;
+    min-height: 470px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-glow {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(118,84,232,0.35),
+        transparent 70%
+    );
+    filter: blur(20px);
+}
+
+.preview-label {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 14px;
+    border-radius: 25px;
+    background: #191d30;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #bba8ff;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.phone-frame {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    border-radius: 20px;
+    transform: none;
+    box-shadow: none;
+}
+
+.phone-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    background: transparent;
+    border-radius: 20px;
+}
+
+.floating-info {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 17px;
+    background: rgba(25,29,49,0.96);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 13px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.floating-info strong {
+    display: block;
+    font-size: 12px;
+}
+
+.floating-info small {
+    display: block;
+    margin-top: 5px;
+    font-size: 10px;
+    color: #9da5b9;
+}
+
+.info-one {
+    left: -5px;
+    top: 100px;
+}
+
+.info-two {
+    right: -10px;
+    bottom: 65px;
+}
+
+.info-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+}
+
+.purple-info {
+    color: #bda8ff;
+    background: rgba(167,139,250,0.2);
+}
+
+.blue-info {
+    color: #73b5ff;
+    background: rgba(75,160,255,0.15);
+}
+
+.orbit {
+    position: absolute;
+    border: 1px solid rgba(167,139,250,0.16);
+    border-radius: 50%;
+}
+
+.orbit-one {
+    width: 420px;
+    height: 420px;
+}
+
+.orbit-two {
+    width: 490px;
+    height: 490px;
+}
+
+/* FEATURES */
+
+.meetgo-features {
+    padding: 85px 9%;
+    background: #0d1120;
+}
+
+.features-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+
+.features-heading > span {
+    color: #a78bfa;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.features-heading h2 {
+    font-size: 36px;
+    letter-spacing: -1px;
+    margin: 16px 0;
+}
+
+.features-heading p {
+    color: #9da5b9;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    padding: 30px;
+    border-radius: 17px;
+    background: #14192a;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(167,139,250,0.5);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+
+.icon-purple {
+    color: #bda8ff;
+    background: rgba(167,139,250,0.15);
+}
+
+.icon-orange {
+    color: #ffb26e;
+    background: rgba(255,152,57,0.15);
+}
+
+.icon-blue {
+    color: #73b5ff;
+    background: rgba(75,160,255,0.15);
+}
+
+.icon-green {
+    color: #5ee6a8;
+    background: rgba(94,230,168,0.15);
+}
+
+.icon-pink {
+    color: #ff8ec5;
+    background: rgba(255,142,197,0.15);
+}
+
+.icon-yellow {
+    color: #f7d36c;
+    background: rgba(247,211,108,0.15);
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    margin: 0 0 12px;
+}
+
+.feature-card p {
+    color: #9da5b9;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* CTA */
+
+.meetgo-cta {
+    margin: 80px 9%;
+    padding: 45px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background: linear-gradient(110deg, #32235f, #6245bb);
+}
+
+.meetgo-cta > div > span {
+    color: #d4c8ff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.meetgo-cta h2 {
+    font-size: 29px;
+    margin: 14px 0 10px;
+}
+
+.meetgo-cta p {
+    color: #d2c7f5;
+    font-size: 13px;
+}
+
+.meetgo-cta button {
+    padding: 16px 22px;
+    border: none;
+    border-radius: 9px;
+    background: white;
+    color: #382568;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.meetgo-cta button:hover {
+    background: #e8e0ff;
+    transform: translateY(-3px);
+}
+
+.meetgo-cta button span {
+    margin-left: 10px;
+}
+
+/* FOOTER */
+
+.meetgo-footer {
+    padding: 30px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.meetgo-footer p,
+.meetgo-footer small {
+    color: #8992a8;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+    .meetgo-hero {
+        grid-template-columns: 1fr;
+        padding: 70px 7%;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions,
+    .hero-note {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        min-height: 480px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .meetgo-navbar {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .meetgo-logo h2 {
+        font-size: 22px;
+    }
+
+    .meetgo-nav-links {
+        display: none;
+    }
+
+    .meetgo-nav-actions {
+        gap: 2px;
+    }
+
+    .meetgo-nav-actions button {
+        padding: 9px 10px;
+        font-size: 10px;
+    }
+
+    .meetgo-hero {
+        padding: 55px 6% 65px;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+        letter-spacing: -2px;
+    }
+
+    .hero-content > p {
+        font-size: 14px;
+    }
+
+    .hero-visual {
+        min-height: 390px;
+    }
+
+    .phone-frame {
+        width: 70%;
+        height: 330px;
+    }
+
+    .floating-info {
+        padding: 9px;
+        gap: 7px;
+    }
+
+    .floating-info strong {
+        font-size: 10px;
+    }
+
+    .floating-info small {
+        font-size: 8px;
+    }
+
+    .info-one {
+        left: -4px;
+        top: 75px;
+    }
+
+    .info-two {
+        right: -4px;
+        bottom: 35px;
+    }
+
+    .preview-label {
+        font-size: 8px;
+        right: 0;
+    }
+
+    .orbit-one {
+        width: 320px;
+        height: 320px;
+    }
+
+    .orbit-two {
+        width: 360px;
+        height: 360px;
+    }
+
+    .meetgo-features {
+        padding: 65px 6%;
+    }
+
+    .features-heading h2 {
+        font-size: 28px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .meetgo-cta {
+        margin: 55px 6%;
+        padding: 30px 22px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .meetgo-cta h2 {
+        font-size: 24px;
+    }
+
+    .meetgo-footer {
+        padding: 30px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
